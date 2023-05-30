@@ -1,0 +1,35 @@
+﻿@model ZSK_Währungsrechner_WEB.Models.ZSK
+@{
+	Layout = null;
+}
+<head>
+	<style>
+		.center {
+			text-align: center;
+			font-size : 20px; width: 100%; height: 100px;
+		}
+	</style>
+</head>
+<body>
+<div class="center">
+    <h1>Währungsrechner</h1>
+		<table>
+			<td><a asp-action="WechselkursZSK"><button type="button">ZSK Wechselkurs ändern</button></a></td>
+			<td><a asp-action="WechselkursDAHRS"><button type="button">DAHRS Wechselkurs ändern</button></a></td>
+			<td><a asp-action="Wechselkurs"><button type="button">Alle Wechselkurse</button></a></td>
+		</table>
+	<table>
+		<th><img src="~/Währung.jpg" width="40%" height="65%" /></th>
+	<th><table>	
+	<td><a asp-action="ZSKInDAHRS"><button type="button">ZSK in DAHRS</button></a></td>
+	<td><a asp-action="DAHRSInZSK"><button type="button">DAHRS in ZSK</button></a></td>
+	</table></th>			
+	</table>
+	<table>
+			<td><a asp-action="EuroInZSK"><button type="button">Euro in ZSK</button></a></td>
+			<td><a asp-action="ZSKINEuro"><button type="button">ZSK in Euro</button></a></td>
+			<td><a asp-action="EuroInDAHRS"><button type="button">Euro in DAHRS</button></a></td>
+			<td><a asp-action="DAHRSInEuro"><button type="button">DAHRS in Euro</button></a></td>
+	</table>
+</div>
+</body>

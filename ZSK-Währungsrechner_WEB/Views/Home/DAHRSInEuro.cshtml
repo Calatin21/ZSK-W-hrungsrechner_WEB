@@ -1,0 +1,47 @@
+﻿@model ZSK_Währungsrechner_WEB.Models.DAHRS
+@{
+	Layout = null;
+}
+<head>
+	<style>
+		.center {
+			text-align: center;
+		}
+	</style>
+</head>
+<div class="center">
+	<h1>Währungsrechner</h1>
+	<form asp-action="DAHRSInEuro" method="post">
+		<div asp-validation-summary="All"></div>
+		<table>
+			<tr>
+				<td width="50%"><img src="~/Währung.jpg" width="40%" height="65%" /></td>
+				<td>
+					<table>
+						<tr>
+							<td><label asp-for="Dorsch">Dorsch:</label></td>
+							<td><input asp-for="Dorsch" value="0" /></td>
+						</tr>
+						<tr>
+							<td><label asp-for="Rochen">Rochen:</label></td>
+							<td><input asp-for="Rochen" value="0" /></td>
+						</tr>
+						<tr>
+							<td><label asp-for="Aal">Aal:</label></td>
+							<td><input asp-for="Aal" value="0" /></td>
+						</tr>
+						<tr>
+							<td><label asp-for="Hering">Hering:</label></td>
+							<td><input asp-for="Hering" value="0" /></td>
+						</tr>
+						<tr>
+							<td><label asp-for="Sprotten">Sprotten:</label></td>
+							<td><input asp-for="Sprotten" value="0" /></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<button type="submit">Umrechnen</button>
+	</form>
+</div>

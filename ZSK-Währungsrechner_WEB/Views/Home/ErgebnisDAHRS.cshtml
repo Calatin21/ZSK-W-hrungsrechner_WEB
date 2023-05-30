@@ -1,0 +1,43 @@
+﻿@model ZSK_Währungsrechner_WEB.Models.DAHRS
+@{
+	Layout = null;
+}
+<head>
+	<style>
+		.center {
+			text-align: center;
+		}
+	</style>
+</head>
+<div class="center">
+	<h1>Währungsrechner</h1>
+	<form asp-action="ErgebnisDAHRS" method="get">
+		<p>
+			<label asp-for="Dorsch">Dorsch:</label>
+			<input asp-for="Dorsch" />
+			<img src="~/Dorsch.png" width=50px height=25px />
+		</p>
+		<p>
+			<label asp-for="Rochen">Rochen:</label>
+			<input asp-for="Rochen" />
+			<img src="~/Rochen.png" width=50px height=25px />
+		</p>
+		<p>
+			<label asp-for="Aal"> Aal:</label>
+			<input asp-for="Aal" />
+			<img src="~/Aal.png" width=50px height=25px />
+		</p>
+		<p>
+			<label asp-for="Hering">Hering:</label>
+			<input asp-for="Hering" />
+			<img src="~/Herring.jpg" width=50px height=25px />
+		</p>
+		<p>
+			<label asp-for="Sprotten">Sprotten:</label>
+			<input asp-for="Sprotten" />
+			<img src="~/Sprotte.png" width=50px height=25px />
+		</p>
+	</form>
+
+	<a asp-action="Index"><button type="button">HOME</button></a>
+</div>

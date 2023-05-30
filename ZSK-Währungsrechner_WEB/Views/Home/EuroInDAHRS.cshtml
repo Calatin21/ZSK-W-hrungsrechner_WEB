@@ -1,0 +1,25 @@
+﻿@model ZSK_Währungsrechner_WEB.Models.Euro
+@{
+	Layout = null;
+}
+<head>
+	<style>
+		.center {
+			text-align: center;
+		}
+	</style>
+</head>
+<div class="center">
+	<h1>Währungsrechner</h1>
+	<form asp-action="EuroInDAHRS" method="post">
+		<div asp-validation-summary="All"></div>
+		<table>
+			<tr>
+				<td width="50%"><img src="~/Währung.jpg" width="40%" height="65%" /></td>
+				<td><label asp-for="Betrag">Euro betrag:</label></td>
+				<td><input asp-for="Betrag" value="0" /></td>
+			</tr>
+		</table>
+		<button type="submit">Umrechnen</button>
+	</form>
+</div>

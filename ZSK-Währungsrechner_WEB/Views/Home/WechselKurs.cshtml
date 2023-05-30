@@ -1,0 +1,62 @@
+﻿@model List<double?>
+@{
+	Layout = null;
+}
+<head>
+	<style>
+		.center {
+			text-align: center;
+		}
+	</style>
+</head>
+<div class="center">
+	<h1>Wechselkurs</h1>
+	<form asp-action="WechselKurs" method="get">
+		<p>
+			<label asp-for="@Model[0]">Kuh Betrag:</label>
+			<input asp-for="@Model[0]" />
+			<img src="~/Kuh.jpg" width=50px height=25px />
+		</p>
+		<p>
+			<label asp-for="@Model[1]">Schaf Betrag:</label>
+			<input asp-for="@Model[1]" />
+			<img src="~/Schaf.jpg" width=50px height=25px />
+		</p>
+		<p>
+			<label asp-for="@Model[2]"> Ziege Betrag:</label>
+			<input asp-for="@Model[2]" />
+			<img src="~/Ziege.jpg" width=50px height=25px />
+		</p>
+		<p>
+			<label asp-for="@Model[3]">Euro Restbetrag:</label>
+			<input asp-for="@Model[3]" />
+			<img src="~/KleineZiege.jpg" width=50px height=25px />
+		</p>
+		<p>
+			<label asp-for="@Model[4]">Dorsch:</label>
+			<input asp-for="@Model[4]" />
+			<img src="~/Dorsch.png" width=50px height=25px />
+		</p>
+		<p>
+			<label asp-for="@Model[5]">Aal:</label>
+			<input asp-for="@Model[5]" />
+			<img src="~/Rochen.png" width=50px height=25px />
+		</p>
+		<p>
+			<label asp-for="@Model[6]"> Hering:</label>
+			<input asp-for="@Model[6]" />
+			<img src="~/Aal.png" width=50px height=25px />
+		</p>
+		<p>
+			<label asp-for="@Model[7]">Rochen:</label>
+			<input asp-for="@Model[7]" />
+			<img src="~/Herring.jpg" width=50px height=25px />
+		</p>
+		<p>
+			<label asp-for="@Model[8]">Sprotten:</label>
+			<input asp-for="@Model[8]" />
+			<img src="~/Sprotte.png" width=50px height=25px />
+		</p>
+	</form>
+	<a asp-action="Index"><button type="button">HOME</button></a>
+</div>

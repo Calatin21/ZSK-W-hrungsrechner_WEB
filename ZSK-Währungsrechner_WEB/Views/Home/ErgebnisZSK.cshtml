@@ -1,0 +1,37 @@
+﻿@model ZSK_Währungsrechner_WEB.Models.ZSK
+@{
+	Layout = null;
+}
+<head>
+	<style>
+		.center {
+			text-align: center;
+		}
+	</style>
+</head>
+<div class="center">
+	<h1>Währungsrechner</h1>				
+	<form asp-action="ErgebnisZSK" method="get">
+		<p>
+				<label asp-for="Kuh">Kuh Betrag:</label>
+				<input asp-for="Kuh" />
+				<img src="~/Kuh.jpg" width=50px height=25px />
+			</p>
+		<p>
+				<label asp-for="Schaf">Schaf Betrag:</label>
+			<input asp-for="Schaf" />
+						<img src="~/Schaf.jpg" width=50px height=25px />
+			</p>
+		<p>
+				<label asp-for="Ziege"> Ziege Betrag:</label>
+			<input asp-for="Ziege"  />
+				<img src="~/Ziege.jpg" width=50px height=25px />
+			</p>
+			<p>
+				<label asp-for="KleineZiege">Euro Restbetrag:</label>
+				<input asp-for="KleineZiege" />
+			<img src="~/KleineZiege.jpg" width=50px height=25px />
+			</p>		
+		</form>	
+	<a asp-action="Index"><button type="button">HOME</button></a>
+</div>
